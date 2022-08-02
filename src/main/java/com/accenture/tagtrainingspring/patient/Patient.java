@@ -10,13 +10,15 @@ public class Patient {
 
     private LocalDate DOB;
 
-    public Patient(String name, int id, LocalDate DOB) {
+    private String Gender;
+
+    public Patient(String name, int id, LocalDate DOB, String gender) {
         Name = name;
         Id = id;
         this.DOB = DOB;
+        Gender = gender;
     }
-
-    public String getName() {
+       public String getName() {
         return Name;
     }
 
@@ -38,5 +40,13 @@ public class Patient {
 
     public void setDOB(LocalDate DOB) {
         this.DOB = DOB;
+    }
+
+    public String getGender() {
+        return Gender;
+    }
+
+    public void setGender(String gender) {
+        Gender = gender;
     }
 }

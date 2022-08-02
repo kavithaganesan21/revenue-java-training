@@ -13,8 +13,11 @@ public class TagTrainingSpringApplication {
 		SpringApplication.run(TagTrainingSpringApplication.class, args);
 		printWelcomeMessage();
 
-		 Patient p1 = new Patient("Joe",1, LocalDate.of(1940, 1, 1));
-		 System.out.println(p1.getName());
+		 Patient p1 = new Patient("Joe",1, LocalDate.of(1940, 1, 1),"Male");
+
+//		 Screening s1 =new Screening(1,1,LocalDate.of(2020,7,26),false);
+		Screening s1 =new Screening(1,p1,LocalDate.of(2020,7,26),false);
+		 System.out.println(p1.getName()+ " has a malignant diagnosis of "+ s1.getMalignantResult());
 	}
 
 	private static void printWelcomeMessage() {
