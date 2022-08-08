@@ -8,9 +8,9 @@ public class Screening {
     private int Screening_Id;
 //    private int Patient_Id;
 
-    private Patient Patient_Id;
+    private Patient Pnt_Id;
     private LocalDate ScreeningDate;
-    private Boolean MalignantResult;
+    private boolean MalignantResult;
 
 //    public Screening(int screening_Id, int patient_Id, LocalDate screeningDate, Boolean malignantResult) {
 //        Screening_Id = screening_Id;
@@ -21,7 +21,7 @@ public class Screening {
 
     public Screening(int screening_Id, Patient patient_Id, LocalDate screeningDate, Boolean malignantResult) {
         Screening_Id = screening_Id;
-        Patient_Id = patient_Id;
+        Pnt_Id = patient_Id;
         ScreeningDate = screeningDate;
         MalignantResult = malignantResult;
     }
@@ -38,16 +38,17 @@ public class Screening {
 //        return Patient_Id;
 //    }
 
-    public Patient getPatient_Id() {
-        return Patient_Id;
+    public Patient getPnt_Id() {
+        return Pnt_Id;
     }
+
 
 //    public void setPatient_Id(int patient_Id) {
 //        Patient_Id = patient_Id;
 //    }
 
     public void setPatient_Id(Patient patient_Id) {
-        Patient_Id = patient_Id;
+        Pnt_Id = patient_Id;
     }
 
     public LocalDate getScreeningDate() {
@@ -58,11 +59,11 @@ public class Screening {
         ScreeningDate = screeningDate;
     }
 
-    public Boolean getMalignantResult() {
+    public boolean getMalignantResult() {
         return MalignantResult;
     }
 
-    public void setMalignantResult(Boolean malignantResult) {
+    public void setMalignantResult(boolean malignantResult) {
         MalignantResult = malignantResult;
     }
 }
